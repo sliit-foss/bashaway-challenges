@@ -1,0 +1,11 @@
+{
+  "name": "lockdown",
+  "scripts": {
+    "execute": "bash execute.sh",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@sliit-foss/bashaway": "1.6.0-blizzard.5",
+    "jest": "29.6.2"
+  }
+}

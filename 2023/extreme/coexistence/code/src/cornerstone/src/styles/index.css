@@ -1,0 +1,5 @@
+@import '@sliit-foss/bashaway-ui/styles';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

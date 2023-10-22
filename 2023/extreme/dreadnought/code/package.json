@@ -1,0 +1,11 @@
+{
+  "name": "dreadnought",
+  "scripts": {
+    "execute": "bash execute.sh",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "29.6.2",
+    "kafkajs": "2.2.4"
+  }
+}

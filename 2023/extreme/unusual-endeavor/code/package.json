@@ -1,0 +1,11 @@
+{
+  "name": "unusual-endeavor",
+  "scripts": {
+    "execute": "bash execute.sh",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "imap-simple": "5.1.0",
+    "jest": "29.6.2"
+  }
+}
