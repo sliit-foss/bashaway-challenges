@@ -1,0 +1,25 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fallen
+  labels:
+    app: fallen
+spec:
+  selector:
+    matchLabels:
+      app: fallen
+  replicas: 1
+  template:
+    metadata:
+      name: fallen
+      labels:
+        app: fallen
+    spec:
+      containers:
+        - name: fallen
+          image: fallen:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000
+        

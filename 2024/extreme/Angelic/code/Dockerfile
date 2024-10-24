@@ -1,0 +1,15 @@
+FROM dart:2.15
+
+ENV SERVICE_VERSION=1.0.0
+ENV SERVICE_HOST=0.0.0.0
+ENV SERVICE_PORT=3000
+
+WORKDIR /app
+
+COPY ./ ./
+
+RUN pub get
+
+EXPOSE 3000
+
+CMD ["dart", "main.dart"]

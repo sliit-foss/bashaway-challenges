@@ -1,0 +1,6 @@
+{
+    "name": "@cosmos/launch-sequence",
+    "version": "0.0.0",
+    "main": "index.js",
+    "dependencies": {}
+}

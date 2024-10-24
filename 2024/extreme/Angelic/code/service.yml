@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: fallen
+spec:
+  selector:
+    app: fallen
+  ports:
+    - port: 3000
+      targetPort: 3000

@@ -1,0 +1,1 @@
+curl "$GITHUB_API_URL/search/issues?q=repo:oven-sh/bun+is:issue+is:open+label:bug" | jq '.total_count'

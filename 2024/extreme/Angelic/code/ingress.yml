@@ -1,0 +1,52 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: angelic-ingress
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: angelic.bashaway.sliitfoss.org
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: general
+                port:
+                  number: 3000
+          - path: /system/info
+            pathType: Prefix
+            backend:
+              service:
+                name: general
+                port:
+                  number: 3000
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: fallen-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: "/$2"
+    nginx.ingress.kubernetes.io/use-regex: "true"
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: angelic.bashaway.sliitfoss.org
+      http:
+        paths:
+          - path: /fallen(/|$)(.*)
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: fallen
+                port:
+                  number: 3000
+          - path: /(.+)
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: custom-default-backend
+                port:
+                  number: 80

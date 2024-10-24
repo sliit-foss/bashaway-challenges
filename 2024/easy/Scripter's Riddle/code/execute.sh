@@ -1,0 +1,1 @@
+echo $(curl -s http://httpbin.org/ip | jq -r .origin)
