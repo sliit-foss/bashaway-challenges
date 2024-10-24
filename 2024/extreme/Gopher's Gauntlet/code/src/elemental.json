@@ -1,0 +1,5 @@
+{
+    "migrations_dir": "database/migrations",
+    "seeds_dir": "database/seeds",
+    "changelog_collection": "changelog"
+}

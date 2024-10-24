@@ -1,0 +1,1 @@
+mkdir -p out && diff -Naru src/gears.js src/gears-1719135696714.js > ./out/gearsmith.patch || true

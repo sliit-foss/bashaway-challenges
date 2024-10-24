@@ -1,0 +1,1 @@
+sudo useradd -m -s /bin/bash Zephyr && echo 'Zephyr:gbz78340' | sudo chpasswd

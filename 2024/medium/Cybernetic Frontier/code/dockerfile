@@ -1,0 +1,5 @@
+FROM tomcat:7
+
+COPY ./src/web /usr/local/tomcat/webapps/ROOT
+
+CMD ["catalina.sh", "run"]

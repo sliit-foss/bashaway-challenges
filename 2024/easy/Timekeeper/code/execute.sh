@@ -1,0 +1,1 @@
+echo "System uptime: $(awk '{print $1}' /proc/uptime)"
